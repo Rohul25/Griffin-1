@@ -12,44 +12,44 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '1923471'))
-API_HASH = environ.get('API_HASH', 'fcdc178451cd234e63faefd38895c991')
-BOT_TOKEN = environ.get('BOT_TOKEN', "5831288690:AAHpDYbbK2wieqnKFq6bKIeuCBBAKOilkSE")
+API_ID = int(environ.get('API_ID', '7342710')
+API_HASH = environ.get('API_HASH', '6c2d8ca807fc7110524f590b864ac0a3')
+BOT_TOKEN = environ.get('BOT_TOKEN', "5831288690:5143822192:AAG1XIrDe32N9Fttj-9bCRnYcoMgxtEbBng")
 
 #Port
 PORT = environ.get("PORT", "8080")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
+USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', TRUE))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/b806ad314d0c415571bde.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '880087645 1441767180').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1441767180').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '880087645 1441767180').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1441767180').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '')
-auth_grp = environ.get('AUTH_GROUP', '-1001535791427')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001673156726')
+auth_grp = environ.get('AUTH_GROUP', '')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://video:video@cluster0.gp0rn.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Griffin:Griffinbot123@cluster0.ct8htaq.mongodb.net/cluster0?retryWrites=true&w=majority" )
 DATABASE_NAME = environ.get('DATABASE_NAME', "asuranj")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'AutofilterBot')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001692224324'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'jasuranbots')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001769998481'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'ThaniBots')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
-SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "ɴᴀᴍᴇ: <b>{file_name}</b> \n\nᴊᴏɪɴ ɴᴏᴡ: [JAsuran Movies](https://t.me/newhevcmovies)</b>")
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "ɴᴀᴍᴇ: <b>{file_name}</b> \n\nᴊᴏɪɴ ɴᴏᴡ: [JAsuran Movies](https://t.me/newhevcmovies)</b>")
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🧿 ᴛɪᴛᴛʟᴇ :  {title} \n🌟 ʀᴀᴛɪɴɢ : {rating} \n🎭 ɢᴇɴʀᴇ : {genres} \n📆 ʀᴇʟᴇᴀsᴇ : {year} \n⏰ ᴅᴜʀᴀᴛɪᴏɴ : {runtime} \n🎙️ʟᴀɴɢᴜᴀɢᴇ : {languages} \n🔖 sʜᴏʀᴛ : {plot} \n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : @JAsuranbots")
+SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True )
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>• Fɪʟᴇ ɴᴀᴍᴇ - <code>{name}</code> \n\n• sɪᴢᴇ - <code>{size}</code> \n\n• ᴜᴘʟᴏᴀᴅᴇʀ - @ViralBeatz</b>")
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b>• Fɪʟᴇ ɴᴀᴍᴇ - <code>{name}</code> \n\n• sɪᴢᴇ - <code>{size}</code> \n\n• ᴜᴘʟᴏᴀᴅᴇʀ - @ViralBeatz</b>")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🧿 ᴛɪᴛᴛʟᴇ :  {title} \n🌟 ʀᴀᴛɪɴɢ : {rating} \n🎭 ɢᴇɴʀᴇ : {genres} \n📆 ʀᴇʟᴇᴀsᴇ : {year} \n⏰ ᴅᴜʀᴀᴛɪᴏɴ : {runtime} \n🎙️ʟᴀɴɢᴜᴀɢᴇ : {languages} \n🔖 sʜᴏʀᴛ : {plot} \n")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "True"), False)
-SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
+SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "False"), False)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001692224324')).split()]
