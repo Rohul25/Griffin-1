@@ -1,10 +1,10 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/Richnix/auto /auto
+  git clone https://github.com/Griffin43/Griffin /Griffin
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /auto
+  git clone $UPSTREAM_REPO /Griffin
 fi
 cd /auto
 pip3 install -U -r requirements.txt
