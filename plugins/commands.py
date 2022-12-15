@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('⚡ UᎮDΛTΞS ⚡', url='https://telegram.dog/JAsuranbots')
+                InlineKeyboardButton('⚡ UᎮDΛTΞS ⚡', url='https://telegram.dog/ThaniBots')
             ],
             [
-                InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url=f"https://telegram.dog/JAsuranbots"),
+                InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url=f"https://telegram.dog/ThaniBbots"),
             ],
             [
                 InlineKeyboardButton(text=DOWNLOAD_TEXT_NAME,url=DOWNLOAD_TEXT_URL)
@@ -47,8 +47,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://telegram.dog/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url='https://telegram.dog/JAsuranserials'),
-            InlineKeyboardButton('🤖 UᎮDΛTΞS 🤖', url='https://telegram.dog/JAsuranbots')
+            InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url='https://telegram.dog/ThaniBots'),
+            InlineKeyboardButton('🤖 UᎮDΛTΞS 🤖', url='https://telegram.dog/ThaniBots')
             ],[
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
             InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
@@ -93,8 +93,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://telegram.dog/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url='https://telegram.dog/JAsuranbots'),
-            InlineKeyboardButton('🤖 UᎮDΛTΞS 🤖', url='https://telegram.dog/JAsuranbots')
+            InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url='https://telegram.dog/ViralBeatz'),
+            InlineKeyboardButton('🤖 UᎮDΛTΞS 🤖', url='https://telegram.dog/ThaniBots')
             ],[
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
             InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
@@ -247,7 +247,7 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('Join', url='https://telegram.dog/JAsuranserials') ] ] ),
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('Join', url='https://telegram.dog/ThaniBots') ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
                     
@@ -426,16 +426,6 @@ async def settings(client, message):
                 InlineKeyboardButton(
                     '✅ 𝐘𝐄𝐒' if settings["botpm"] else '❌ 𝐍𝐎',
                     callback_data=f'setgs#botpm#{settings["botpm"]}#{grp_id}',
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    '𝐅𝐈𝐋𝐄 𝐒𝐄𝐂𝐔𝐑𝐄',
-                    callback_data=f'setgs#file_secure#{settings["file_secure"]}#{grp_id}',
-                ),
-                InlineKeyboardButton(
-                    '✅ 𝐘𝐄𝐒' if settings["file_secure"] else '❌ 𝐍𝐎',
-                    callback_data=f'setgs#file_secure#{settings["file_secure"]}#{grp_id}',
                 ),
             ],
             [
