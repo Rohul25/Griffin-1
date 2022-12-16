@@ -36,7 +36,7 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Griffin:Griffinbot123@cluster0.ct8htaq.mongodb.net/cluster0?retryWrites=true&w=majority" )
-DATABASE_NAME = environ.get('DATABASE_NAME', "asuranj")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Griffin")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'AutofilterBot')
 
 # Others
@@ -71,21 +71,21 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
     
       # URL Shortener #
 
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'tnlink.in')
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '003db0d0a2e56943b93dc0abd80e1260a17166c8')
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'linkbnao.com')
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '89958ad631187b04fc32c49cfb0df8df132ca69f')
 
      # Auto Delete For Group Message (Self Delete) #
-SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 300))
+SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 180))
 SELF_DELETE = environ.get('SELF_DELETE', True)
 if SELF_DELETE == "True":
     SELF_DELETE = True
 
     # Download Tutorial Button #
 DOWNLOAD_TEXT_NAME = "📥 HOW TO DOWNLOAD 📥"
-DOWNLOAD_TEXT_URL = "https://t.me/demoshort/"
+DOWNLOAD_TEXT_URL = "https://telegram.dog/ViralBeatz/"
 
    # Custom Caption Under Button #
 CAPTION_BUTTON = "Join Now"
-CAPTION_BUTTON_URL = "https://t.me/JAsuranserials"
+CAPTION_BUTTON_URL = "https://t.me/ViralBeatz"
 
    # Auto Delete For Bot Sending Files #
