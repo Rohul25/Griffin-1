@@ -82,7 +82,7 @@ if SELF_DELETE == "True":
 
     # Download Tutorial Button #
 DOWNLOAD_TEXT_NAME = "📥 HOW TO DOWNLOAD 📥"
-DOWNLOAD_TEXT_URL = "https://telegram.dog/ViralBeatz/"
+DOWNLOAD_TEXT_URL = "https://telegram.dog/ViralBeatz/34"
 
    # Custom Caption Under Button #
 CAPTION_BUTTON = "Join Now"
