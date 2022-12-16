@@ -21,7 +21,7 @@ PORT = environ.get("PORT", "8080")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', TRUE))
+USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/571d73b39935b9b8ae9f0.jpg')).split()
 
 # Admins, Channels & Users
