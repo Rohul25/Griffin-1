@@ -37,7 +37,7 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Griffin:Griffinbot123@cluster0.ct8htaq.mongodb.net/cluster0?retryWrites=true&w=majority" )
 DATABASE_NAME = environ.get('DATABASE_NAME', "Griffin")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'AutofilterBot')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'TELEGRAM_FILES')
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001769998481'))
