@@ -21,7 +21,7 @@ PORT = environ.get("PORT", "8080")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
+USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/571d73b39935b9b8ae9f0.jpg')).split()
 
 # Admins, Channels & Users
@@ -29,27 +29,27 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001345164330 -1001645951676 -1001723165183 -1001701669301').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1441767180').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001673156726')
+auth_channel = environ.get('AUTH_CHANNEL', '')
 auth_grp = environ.get('AUTH_GROUP', '')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://AdvikKumar:AdvikKumar@cluster0.be3a1.mongodb.net/cluster0?retryWrites=true&w=majority" )
-DATABASE_NAME = environ.get('DATABASE_NAME', "AdvikKumar")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'TELEGRAM_FILES')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://video:video@cluster0.gp0rn.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "asuranj")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'AutofilterBot')
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001769998481'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'ThaniBots')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
-SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", " •<b>Fɪʟᴇ ɴᴀᴍᴇ<b> - <code>{name}</code> \n\n• <b>sɪᴢᴇ<\b> - <code>{size}</code> \n\n • <b>ᴜᴘʟᴏᴀᴅᴇʀ - @ViralBeatz<\b>")
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b>• Fɪʟᴇ ɴᴀᴍᴇ - <code>{name}</code> \n\n• sɪᴢᴇ - <code>{size}</code> \n\n• ᴜᴘʟᴏᴀᴅᴇʀ - @ViralBeatz</b>")
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b><i>{title}<\i><\b>\n\n<b>‣ ᴛɪᴛᴛʟᴇ : {title} \n‣ ʀᴀᴛɪɴɢ : {rating} \n‣ ɢᴇɴʀᴇ : {genres} \n‣ ʀᴇʟᴇᴀsᴇ : {year}\n\n ‣Note - ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀꜰᴛᴇʀ 3 ᴍɪɴᴜᴛᴇꜱ<\b>")
+SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "•<b>Fɪʟᴇ ɴᴀᴍᴇ<b> - <code>{name}</code> \n\n• <b>sɪᴢᴇ<\b> - <code>{size}</code> \n\n • <b>ᴜᴘʟᴏᴀᴅᴇʀ - @ViralBeatz<\b> ")
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "•<b>Fɪʟᴇ ɴᴀᴍᴇ<b> - <code>{name}</code> \n\n• <b>sɪᴢᴇ<\b> - <code>{size}</code> \n\n • <b>ᴜᴘʟᴏᴀᴅᴇʀ - @ViralBeatz<\b>")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🧿<b><i>{title}<\i><\b>\n\n<b>‣ ᴛɪᴛᴛʟᴇ : {title} \n‣ ʀᴀᴛɪɴɢ : {rating} \n‣ ɢᴇɴʀᴇ : {genres} \n‣ ʀᴇʟᴇᴀsᴇ : {year}\n\n ‣Note - ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀꜰᴛᴇʀ 3 ᴍɪɴᴜᴛᴇꜱ<\b>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "True"), False)
-SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "False"), False)
+SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001769998481')).split()]
